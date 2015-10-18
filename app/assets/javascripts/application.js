@@ -13,4 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require classie
+//= require fwslider
+//= require jquery-ui.min
+//= require jquery.etalage.min
+//= require jquery.fancybox
+//= require jquery.flexisel
+//= require jquery.magnific-popup
+//= require jquery.min
+//= require responsive-nav
+//= require uisearch
 //= require_tree .

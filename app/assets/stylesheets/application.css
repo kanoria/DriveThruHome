@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require_bootstrap
+ *= require_etalage
+ *= require_fwslider
+ *= require_jquery.fancybox
+ *= require_magnific-popup
+ *= require_style
  */
