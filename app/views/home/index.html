@@ -8,16 +8,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Free Snow Bootstrap Website Template | Home :: w3layouts</title>
-<link href="web/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="web/css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="web/js/jquery.min.js"></script>
 <!--<script src="web/js/jquery.easydropdown.js"></script>-->
 <!--start slider -->
-<link rel="stylesheet" href="web/css/fwslider.css" media="all">
+<%= javascript_include_tag "fwslider.css" %>
+<!--link rel="stylesheet" href="web/css/fwslider.css" media="all"-->
 <script src="web/js/jquery-ui.min.js"></script>
 <script src="web/js/fwslider.js"></script>
 <!--end slider -->
@@ -60,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="web/images/logo.png" alt=""/></a>
+						<a href="index.html"><%=image_tag("logo.png")%><!--img src="web/images/logo.png" alt=""/--></a>
 					 </div>
 					 <div class="menu">
 						  <a class="toggleMenu" href="#"><img src="web/images/nav.png" alt="" /></a>
