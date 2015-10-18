@@ -100,11 +100,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					 <li><a class="active-icon c1" href="#"> </a>
 						<ul class="sub-icon1 list">
 						  <div class="product_control_buttons">
-						  	<a href="#"><img src="web/images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="web/images/close_edit.png" alt=""/></a>
+						  	<a href="#"><%=image_tag("edit.png")%><!--img src="web/images/edit.png" alt=""/--></a>
+						  		<a href="#"><%=image_tag("close_edit.png")%><!--img src="web/images/close_edit.png" alt=""/--></a>
 						  </div>
 						   <div class="clear"></div>
-						  <li class="list_img"><img src="web/images/1.jpg" alt=""/></li>
+						  <li class="list_img"><%=image_tag("1.jpg")%><!--img src="web/images/1.jpg" alt=""/--></li>
 						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
                           $12.00</span></li>
 						  <div class="login_buttons">
@@ -128,7 +128,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
          <div class="slider_container">
             <div class="slide"> 
                 <!-- Slide image -->
-               <img src="web/images/slider1.jpg" class="img-responsive" alt=""/>
+               <%= image_tag("slider1.jpg"), :class => "img-responsive" %>
+               <!--img src="web/images/slider1.jpg" class="img-responsive" alt=""/-->
                 <!-- /Slide image -->
                 <!-- Texts container -->
                 <div class="slide_content">
@@ -143,7 +144,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <!-- /Duplicate to create more slides -->
             <div class="slide">
-               <img src="web/images/slider2.jpg" class="img-responsive" alt=""/>
+               <%= image_tag("slider2.jpg"), :class => "img-responsive" %>
+               <!--img src="web/images/slider2.jpg" class="img-responsive" alt=""/-->
                 <div class="slide_content">
                     <div class="slide_content_wrap">
                         <h1 class="title">Run Over<br>Everything</h1>
@@ -165,11 +167,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<p>hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
 			<div class="close_but"><i class="close1"> </i></div>
 				<ul id="flexiselDemo3">
-				<li><img src="web/images/board1.jpg" /></li>
-				<li><img src="web/images/board2.jpg" /></li>
-				<li><img src="web/images/board3.jpg" /></li>
-				<li><img src="web/images/board4.jpg" /></li>
-				<li><img src="web/images/board5.jpg" /></li>
+				<li><%=image_tag("board1.jpg")%></li>
+				<li><%=image_tag("board2.jpg")%></li>
+				<li><%=image_tag("board3.jpg")%></li>
+				<li><%=image_tag("board4.jpg")%></li>
+				<li><%=image_tag("board5.jpg")%></li>
 			</ul>
 		<h3>SnowBoard Extreme Series</h3>
 			<script type="text/javascript">
@@ -220,7 +222,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  <div class="row">
 				<div class="col-md-3 top_box">
 				  <div class="view view-ninth"><a href="single.html">
-                    <img src="web/images/pic1.jpg" class="img-responsive" alt=""/>
+				  	<%= image_tag("pic1.jpg"), :class => "img-responsive" %>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
@@ -234,7 +236,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="col-md-3 top_box">
 					<div class="view view-ninth"><a href="single.html">
-                    <img src="web/images/pic2.jpg" class="img-responsive" alt=""/>
+                    <%= image_tag("pic2.jpg"), :class => "img-responsive" %>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
@@ -247,7 +249,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-3 top_box">
 					<div class="view view-ninth"><a href="single.html">
-                    <img src="web/images/pic3.jpg" class="img-responsive" alt=""/>
+                    <%= image_tag("pic3.jpg"), :class => "img-responsive" %>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
@@ -260,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-3 top_box1">
 					<div class="view view-ninth"><a href="single.html">
-                    <img src="web/images/pic4.jpg" class="img-responsive" alt=""/>
+                    <%= image_tag("pic4.jpg"), :class => "img-responsive" %>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
@@ -332,12 +334,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				        <dt><a href="#"><span>Change Region</span></a></dt>
 				        <dd>
 				            <ul>
-				                <li><a href="#">Australia<img class="flag" src="web/images/as.png" alt="" /><span class="value">AS</span></a></li>
-				                <li><a href="#">Sri Lanka<img class="flag" src="web/images/srl.png" alt="" /><span class="value">SL</span></a></li>
-				                <li><a href="#">Newziland<img class="flag" src="web/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-				                <li><a href="#">Pakistan<img class="flag" src="web/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-				                <li><a href="#">United Kingdom<img class="flag" src="web/images/uk.png" alt="" /><span class="value">UK</span></a></li>
-				                <li><a href="#">United States<img class="flag" src="web/images/us.png" alt="" /><span class="value">US</span></a></li>
+				                <li><a href="#">Australia<%= image_tag("as.png"), :class => "flag" %><span class="value">AS</span></a></li>
+				                <li><a href="#">Sri Lanka<%= image_tag("srl.png"), :class => "flag" %><span class="value">SL</span></a></li>
+				                <li><a href="#">Newziland<%= image_tag("nz.png"), :class => "flag" %><span class="value">NZ</span></a></li>
+				                <li><a href="#">Pakistan<%= image_tag("pk.png"), :class => "flag" %><span class="value">Pk</span></a></li>
+				                <li><a href="#">United Kingdom<%= image_tag("uk.png"), :class => "flag" %><span class="value">UK</span></a></li>
+				                <li><a href="#">United States<%= image_tag("us.png"), :class => "flag" %><span class="value">US</span></a></li>
 				            </ul>
 				         </dd>
 	   				  </dl>
