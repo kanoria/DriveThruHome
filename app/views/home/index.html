@@ -14,10 +14,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--<script src="web/js/jquery.easydropdown.js"></script>-->
 <!--start slider -->
-<%= javascript_include_tag "fwslider.css" %>
+<%= stylesheet_include_tag "fwslider.css" %>
 <!--link rel="stylesheet" href="web/css/fwslider.css" media="all"-->
-<script src="web/js/jquery-ui.min.js"></script>
-<script src="web/js/fwslider.js"></script>
+<%= javascript_include_tag "jquery-ui.min.js" %>
+<%= javascript_include_tag "fwslider.js" %>
+<!--script src="web/js/jquery-ui.min.js"></script>
+<script src="web/js/fwslider.js"></script-->
 <!--end slider -->
 <script type="text/javascript">
         $(document).ready(function() {
@@ -61,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<a href="index.html"><%=image_tag("logo.png")%><!--img src="web/images/logo.png" alt=""/--></a>
 					 </div>
 					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="web/images/nav.png" alt="" /></a>
+						  <a class="toggleMenu" href="#"><%=image_tag("nav.png")%></a>
 						    <ul class="nav" id="nav">
 						    	<li><a href="shop.html">Shop</a></li>
 						    	<li><a href="team.html">Team</a></li>
@@ -71,7 +73,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="contact.html">Contact</a></li>								
 								<div class="clear"></div>
 							</ul>
-							<script type="text/javascript" src="web/js/responsive-nav.js"></script>
+							<%= javascript_include_tag "responsive-nav.js" %>
+							<!--script type="text/javascript" src="web/js/responsive-nav.js"></script-->
 				    </div>							
 	    		    <div class="clear"></div>
 	    	    </div>
