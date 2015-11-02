@@ -8,47 +8,55 @@
 
 	<div class="row" style="col-md-12; text-align:center; padding-bottom: 30pt">
 	  <h1> Select colours & design styles you like </h1>
+	  <p>Thank you for choosing the <%= @selection %>.</p>
 	</div>
 	
+	<input type="hidden" id="selection" name="selection" value="<%= @selection %>" />
+
 	<div class="panel">
 
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
-
-	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
-
-	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
-
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
-
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch1" name="switch1" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
 	</div>
 	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>	
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch2" name="switch2" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch3" name="switch3" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch1" name="switch1" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch1" name="switch1" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="shop_box">
+		  <input type="checkbox" id="switch1" name="switch1" class="imageselectbox"/>
+		  <label class="label-for-imageselectbox" for="switch1"><%=image_tag("pic5.jpg")%></label>
+		</div>
+	</div>
+
 	
 	</div>
       </div>

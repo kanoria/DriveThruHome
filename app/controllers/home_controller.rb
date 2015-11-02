@@ -4,11 +4,10 @@ class HomeController < ApplicationController
   end
 
   def shop
-    render :shop
   end
 
   def choices
-    render :choices
+    @selection = params[:selection]
   end
 
   def selections

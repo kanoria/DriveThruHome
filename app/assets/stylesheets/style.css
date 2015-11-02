@@ -22,6 +22,20 @@ body a{
 	float:left;
 	width: 59%;
 }
+
+.imageselectbox{
+    display: none;
+}
+
+
+.imageselectbox:checked + .label-for-imageselectbox {
+    border: 2px solid blue;
+}
+
+.imageselectbox + .label-for-imageselectbox {
+    border: 2px solid transparent;
+}
+
 .logo{
 	float:left;
 	margin-right: 2%;
@@ -1037,6 +1051,8 @@ li.youtube a span {
 }
 .shop_box{
 	position:relative;
+    padding-left:3%;
+    padding-right:3%
 }
 .shop_desc{
 	border:1px solid #E0E0E0;
