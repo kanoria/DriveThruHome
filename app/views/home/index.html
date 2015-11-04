@@ -1,149 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Drive Thru Home | A quick tool to furnish your home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--<script src="web/js/jquery.easydropdown.js"></script>-->
-<!--start slider -->
-<%= stylesheet_link_tag "fwslider.css" %>
-<!--link rel="stylesheet" href="web/css/fwslider.css" media="all"-->
-<%= javascript_include_tag "jquery-ui.min.js" %>
-<%= javascript_include_tag "fwslider.js" %>
-<!--script src="web/js/jquery-ui.min.js"></script>
-<script src="web/js/fwslider.js"></script-->
-<!--end slider -->
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
-
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
-
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
-
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
-</head>
-<body>
-	<div class="header">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				 <div class="header-left">
-					 <div class="logo">
-						<a href="index.html"><%=image_tag("logo.png")%><!--img src="web/images/logo.png" alt=""/--></a>
-					 </div>
-					 <div class="menu">
-						  <a class="toggleMenu" href="#"><%=image_tag("nav.png")%></a>
-						    <ul class="nav" id="nav">
-						    	<li><a href="shop.html">Support</a></li>
-						    	<li><a href="experiance.html">Contact</a></li>
-						    	<!--li><a href="experiance.html">Experiance</a></li>
-						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="contact.html">Contact</a></li>-->								
-								<div class="clear"></div>
-							</ul>
-							<%= javascript_include_tag "responsive-nav.js" %>
-							<!--script type="text/javascript" src="web/js/responsive-nav.js"></script-->
-				    </div>							
-	    		    <div class="clear"></div>
-	    	    </div>
-	            <div class="header_right">
-	    		  <!-- start search-->
-				      <div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-						<!----search-scripts---->
-						<%= javascript_include_tag "classie.js" %>
-						<%= javascript_include_tag "uisearch.js" %>
-						<!--script src="web/js/classie.js"></script>
-						<script src="web/js/uisearch.js"></script-->
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-						<!----//search-scripts---->
-				    <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-						  <div class="product_control_buttons">
-						  	<a href="#"><%=image_tag("edit.png")%><!--img src="web/images/edit.png" alt=""/--></a>
-						  		<a href="#"><%=image_tag("close_edit.png")%><!--img src="web/images/close_edit.png" alt=""/--></a>
-						  </div>
-						   <div class="clear"></div>
-						  <li class="list_img"><%=image_tag("1.jpg")%><!--img src="web/images/1.jpg" alt=""/--></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
-							 <div class="clear"></div>
-						  </div>
-						  <div class="clear"></div>
-						</ul>
-					 </li>
-				   </ul>
-		           <div class="clear"></div>
-	       </div>
-	      </div>
-		 </div>
-	    </div>
-	</div>
 	<div class="banner">
 	<!-- start slider -->
        <div id="fwslider">
          <div class="slider_container">
             <div class="slide"> 
                 <!-- Slide image -->
-               <%= image_tag("slider1.jpg", :class => "img-responsive") %>
-               <!--img src="web/images/slider1.jpg" class="img-responsive" alt=""/-->
+               <%= image_tag("Empty_Home.jpg", :class => "img-responsive") %>
                 <!-- /Slide image -->
                 <!-- Texts container -->
                 <div class="slide_content">
                     <div class="slide_content_wrap">
                         <!-- Text title -->
-                        <h1 class="title">Rishav's Place<br>...yeah.</h1>
+                        <h1 class="title" style="color: black"><br><br>Drive in here</h1>
                         <!-- /Text title -->
-                        <!--div class="button"><a href="#">See Details</a></div-->
                     </div>
                 </div>
                <!-- /Texts container -->
             </div>
             <!-- /Duplicate to create more slides -->
             <div class="slide">
-               <%= image_tag("slider2.jpg", :class => "img-responsive")%>
+               <%= image_tag("Full_Home.jpg", :class => "img-responsive")%>
                <!--img src="web/images/slider2.jpg" class="img-responsive" alt=""/-->
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-                        <h1 class="title">Over the hills<br>Over the city.</h1>
+                        <h1 class="title" style="color: black; text-align: center"><br>Drive out with furniture</h1>
                        	<!--div class="button"><a href="#">See Details</a></div-->
                     </div>
                 </div>
@@ -156,7 +35,7 @@
        </div>
        <!--/slider -->
       </div>
-	  <!--div class="main">
+	  <div class="main">
 	    <!--
 		<div class="content-top">
 			<h2>snowboards</h2>
@@ -207,141 +86,28 @@
 		<div class="container">
 			<div class="row content_bottom-text">
 			  <div class="col-md-12">
-				<h2 style="color:white;text-align:center;font-size:3em;font-weight:800; margin-bottom:3%;margin-top:3%"> DRIVETHRUHOME<br> Justice in a box</h2>
-				<p class="m_1" style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
+				<h2 style="color:white;text-align:center;font-size:3em;font-weight:800; margin-bottom:3%;margin-top:3%"> Furnish your home in 3 quick steps</h2>
+				<p class="m_1" style="color:white; text-align: center; font-size: 1.45em">Drive Thru to match your styles and preferences and select furniture that can be ordered to your home. No more browsing through hundreds of stores to search for the furniture that's right for you! Save hours walking around furniture stores and hauling bulky items up several floors.</p>
 			  </div>
 			</div>
 		</div>
 	</div>
 	<div class="features" style="padding-top: 3%; padding-bottom: 3% !important">
 	  <div class="container">
-	    <!--h3  style="color:black;text-align:center;font-size:3em;font-weight:800; margin-bottom:3%;margin-top:3%">Select a Room</h3>
-	    <div class="close_but" style="margin-bottom:2%;margin-top:3% !important"><i class="close1"> </i></div-->
-	    <div class="row" style="background-color: aquamarine; padding-bottom: 100pt">
-	      <!--
-	      <div class="col-md-3 top_box">
-		<div class="view view-ninth"><a href="single.html">
-		    <%= image_tag("pic1.jpg", :class => "img-responsive") %>
-		    <div class="mask mask-1"> </div>
-		    <div class="mask mask-2"> </div>
-		    <div class="content">
-		      <h2>Step 1</h2>
-		      <p>ZZZZZZzzzzzzzZZZZZ.</p>
-		    </div>
-		</a> </div
-			</div>
-		<h4 class="m_4">
-		  <%=link_to("step1", controller: "home") %>
-		  <a href="#">Bedroom</a>
-		</h4>
-		<p class="m_5">a place to sleep.</p>
-	      </div>
-	      <div class="col-md-3 top_box">
-		<div class="view view-ninth"><a href="single.html">
-		    <%= image_tag("pic2.jpg", :class => "img-responsive") %>
-		<div class="mask mask-1"> </div>
-		<div class="mask mask-2"> </div>
-		<div class="content">
-                  <h2>Living Room</h2>
-                  <p>Crunch crunch tap tap</p>
-		</div>
-</a> </div>
-<h4 class="m_4"><a href="#">Living Room</a></h4>
-<p class="m_5">a place to live.</p>
-</div>
-<div class="col-md-3 top_box">
-  <div class="view view-ninth"><a href="single.html">
-      <%= image_tag("pic3.jpg", :class => "img-responsive") %>
-      <div class="mask mask-1"> </div>
-      <div class="mask mask-2"> </div>
-      <div class="content">
-        <h2>Kitchen</h2>
-        <p>Slice slice dice dice</p>
-      </div>
-  </a> </div>
-  <h4 class="m_4"><a href="#">Kitchen</a></h4>
-                   <p class="m_5">a place to cook</p>
-				</div>
-				<div class="col-md-3 top_box1">
-					<div class="view view-ninth"><a href="single.html">
-                    <%= image_tag("pic4.jpg", :class => "img-responsive") %>
-                    <div class="mask mask-1"> </div>
-                    <div class="mask mask-2"> </div>
-                      <div class="content">
-                        <h2>Dining Room</h2>
-                        <p>Nom nom nom nom</p>
-                      </div>
-                     </a> </div>
-                   <h4 class="m_4"><a href="#">Dining Room</a></h4>
-                   <p class="m_5">a place to eat</p>
-				</div>
-			</div-->
+      <div class='banner_button'>
+        <a style="background-color: #bdb099;background-repeat:no-repeat; background-position:70%; background-size:100%;font-size: 100%" href="<%=shop_path()%>">
+        <h2 style="color:white;text-align:center;font-size:2em;font-weight:800; margin-bottom:3%;margin-top:3%"> Click to Shop Now</h2> 
+        </a>
+        </div>
+	    
 		 </div>
 
 	    <br><br><br>
 	    
 	    <!--=button_to "Drive Thru!", shop_path() --> 
+        
 
-	    <div class="button"><a style="margin-left: 0%" href="<%= shop_path() %>">Drive Thru!</a></div>
-	    <div class="features" style="padding-bottom: 3% !important"></div>
+	    <!--div class="button"><a style="margin-left: 0%" href="<%= shop_path() %>">Drive Thru!</a></div>
+	    <div class="features" style="padding-bottom: 3% !important"></div-->
 
 	    </div>
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Products</h4>
-							<li><a href="#">Mens</a></li>
-							<li><a href="#">Womens</a></li>
-							<li><a href="#">Youth</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>About</h4>
-							<li><a href="#">Careers and internships</a></li>
-							<li><a href="#">Sponserships</a></li>
-							<li><a href="#">team</a></li>
-							<li><a href="#">Catalog Request/Download</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Customer Support</h4>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Shipping and Order Tracking</a></li>
-							<li><a href="#">Easy Returns</a></li>
-							<li><a href="#">Warranty</a></li>
-							<li><a href="#">Replacement Binding Parts</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Newsletter</h4>
-							<div class="footer_search">
-				    		   <form>
-				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-				    			<input type="submit" value="Go">
-				    		   </form>
-					        </div>
-							<ul class="social">	
-							  <li class="facebook"><a href="#"><span> </span></a></li>
-							  <li class="twitter"><a href="#"><span> </span></a></li>
-							  <li class="instagram"><a href="#"><span> </span></a></li>	
-							  <li class="pinterest"><a href="#"><span> </span></a></li>	
-							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
-						    </ul>
-		   					
-						</ul>
-					</div>
-				</div>
-				<div class="row footer_bottom">
-				    <div class="copy">
-			           <p>© 2015 Rishav Kanoria</p>
-		            </div>
-   				</div>
-			</div>
-		</div>
-</body>	
-</html>

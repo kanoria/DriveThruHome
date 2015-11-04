@@ -1,71 +1,84 @@
-<head>
-</head>
-
-<body>
-  <div class="main">
+<div class="main">
     <div class="shop_top">
       <div class="container">
 
-	<div class="row" style="col-md-12; text-align:center; padding-bottom: 30pt">
-	  <h1> Select colours & design styles you like </h1>
-	</div>
-	
-	<div class="panel">
 
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
+		<div class="features">
+		<div class="container">
+			<h3 class="m_3">Picks for your Room</h3>
+			<div class="close_but"><i class="close1"> </i></div>
+			  
 
-	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
+			  <div class="row">
+				<div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta</p>
+                </div>
 
-	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
+                <div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta</p>
+                </div>
 
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
+                <div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta dsfsfdsfsdsdf</p>
+                </div>
 
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>
-	
-	<div class="col-md-3 shop_box" style="padding-left:3%;padding-right:3%">
-	  <%=image_tag("pic5.jpg")%>
-	  <input type="checkbox" id="switch1" name="switch1" class="switch" />
-	  <label for="switch1">Color Option A</label>
-	</div>	
-	
-	</div>
+                <div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta</p>
+                </div>
+
+                <div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta</p>
+                </div>
+
+                <div class="col-md-3 top_box" style="padding-top: 40px">
+				  <div class="view view-ninth">
+                   <%=image_tag("pic5.jpg")%>
+                  </div>
+                  <h4 class="m_4"><a href="#">Bed</a></h4>
+                  <p class="m_5">gusta</p>
+                </div>
+			</div>
+
+
+			<div class="row">
+				<div class="row shop_box-top; padding-top:30%; margin-top: 10%">
+	<br><br><br><br>
+	<div class="button"><a style="margin-left: 0%;" href="<%= checkout_path() %>">Checkout</a></div>
       </div>
-      
-      <div class="row shop_box-top; padding-top:30%; margin-top: 10%">
-	<br><br>
-	<div class="button"><a style="margin-left: 0%;" href="<%= selections_path() %>">Make my room!!</a></div>
-      </div>
+
+			</div>
+
+
+
+		 </div>
+	</div>
+
+
+
 
 	
-      </div>
-    </div>
-  </div>
+	<input type="hidden" id="selection" name="selection" value="<%= @selection %>" />
 
-
-</body>
-
-<footer>
-
-</footer>
+	</div>
+	</div>
+	</div>

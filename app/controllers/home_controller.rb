@@ -11,7 +11,6 @@ class HomeController < ApplicationController
   end
 
   def selections
-    render :text => 'selections'
   end
   
   def checkout

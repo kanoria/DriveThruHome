@@ -427,6 +427,34 @@ li.list_desc h4 a:hover{
 	transition: all 0.3s;
 	background: #000;
 }
+
+/*
+    Custom Button
+*/
+
+.banner_button {
+    text-align: center;
+}
+
+.banner_button a{
+    color:#fff;
+    font-size:0.85em;
+    text-transform:uppercase;
+    font-weight:800;
+    text-decoration:none;
+    margin-left:0%;
+    border: none;
+    cursor: pointer;
+    padding: 8% 30%;
+    display: inline-block;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #000;
+}
+
+
 .button a:hover{
 	background:#222;
 }

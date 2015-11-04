@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DriveThruHome</title>
+  <title>Drive Thru Home | A quick tool to furnish your home</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--<script src="web/js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<%= stylesheet_link_tag "fwslider.css" %>
+<!--link rel="stylesheet" href="web/css/fwslider.css" media="all"-->
+<%= javascript_include_tag "jquery-ui.min.js" %>
+<%= javascript_include_tag "fwslider.js" %>
+<!--script src="web/js/jquery-ui.min.js"></script>
+<script src="web/js/fwslider.js"></script-->
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
 </head>
 <body>
+
+<div class="header">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                 <div class="header-left">
+                     <div class="logo">
+                        <a href="<%=root_path%>"><%=image_tag("HomeTruckLogo.png")%><!--img src="web/images/logo.png" alt=""/--></a>
+                     </div>
+                     <div class="menu">
+                          <a class="toggleMenu" href="#"><%=image_tag("nav.png")%></a>
+                            <ul class="nav" id="nav">
+                                <li><a href="<%=shop_path%>">Shop</a></li>
+                                <!--li><a href="experiance.html"></a></li-->
+                                <!--li><a href="experiance.html">Experiance</a></li>
+                                <li><a href="shop.html">Company</a></li>
+                                <li><a href="contact.html">Contact</a></li>-->                              
+                                <div class="clear"></div>
+                            </ul>
+                            <%= javascript_include_tag "responsive-nav.js" %>
+                            <!--script type="text/javascript" src="web/js/responsive-nav.js"></script-->
+                    </div>                          
+                    <div class="clear"></div>
+                </div>
+                <div class="header_right">
+                  <!-- start search-->
+                      <div class="search-box">
+                            <div id="sb-search" class="sb-search">
+                                <form>
+                                    <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                                    <input class="sb-search-submit" type="submit" value="">
+                                    <span class="sb-icon-search"> </span>
+                                </form>
+                            </div>
+                        </div>
+                        <!----search-scripts---->
+                        <%= javascript_include_tag "classie.js" %>
+                        <%= javascript_include_tag "uisearch.js" %>
+                        <!--script src="web/js/classie.js"></script>
+                        <script src="web/js/uisearch.js"></script-->
+                        <script>
+                            new UISearch( document.getElementById( 'sb-search' ) );
+                        </script>
+                        <!----//search-scripts---->
+                    <ul class="icon1 sub-icon1 profile_img">
+                     <li><a class="active-icon c1" href="#"> </a>
+                        <ul class="sub-icon1 list">
+                          <div class="product_control_buttons">
+                            <a href="#"><%=image_tag("edit.png")%><!--img src="web/images/edit.png" alt=""/--></a>
+                                <a href="#"><%=image_tag("close_edit.png")%><!--img src="web/images/close_edit.png" alt=""/--></a>
+                          </div>
+                           <div class="clear"></div>
+                          <li class="list_img"><%=image_tag("1.jpg")%><!--img src="web/images/1.jpg" alt=""/--></li>
+                          <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
+                          $12.00</span></li>
+                          <div class="login_buttons">
+                             <div class="check_button"><a href="checkout.html">Check out</a></div>
+                             <div class="login_button"><a href="login.html">Login</a></div>
+                             <div class="clear"></div>
+                          </div>
+                          <div class="clear"></div>
+                        </ul>
+                     </li>
+                   </ul>
+                   <div class="clear"></div>
+           </div>
+          </div>
+         </div>
+        </div>
+    </div>
 
 <%= yield %>
 
 </body>
+
+<div class="footer" style="padding-top:2%">
+                    <div class="copy" style = "padding-left:11%; padding-right:45%">
+                       <p>© 2015 Rishav Kanoria</p>
+                    </div>
+</div>
+
 </html>
