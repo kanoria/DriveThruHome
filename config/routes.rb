@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :choices
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,7 +11,8 @@ Rails.application.routes.draw do
 
   get 'shop/' => 'home#shop', as: 'shop'
   #get 'choices/' => 'home#choices', as: 'choices'
-  get 'choices/:selection' => 'home#choices', as: 'choices'
+
+  get 'styles/:selection' => 'home#styles', as: 'styles'
   get 'selections/' => 'home#selections',  as: 'selections'
   get 'checkout/' => 'home#checkout',  as: 'checkout'
   get 'confirmation/' => 'home#confirmation',  as: 'confirmation'

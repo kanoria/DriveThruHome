@@ -6,8 +6,11 @@ class HomeController < ApplicationController
   def shop
   end
 
-  def choices
+  def styles
     @selection = params[:selection]
+    @choices = Choice.all
+
+
   end
 
   def selections

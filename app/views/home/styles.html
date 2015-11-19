@@ -10,9 +10,22 @@
 
 	<div class="panel">
 
+	<% @choices.each do |choice| %>
 	<div class="col-md-4">
 		<div class="shop_box">
-		  <input type="checkbox" id="Abstract_Art" name="Abstract_Art" class="imageselectbox"/>
+		  <input type="checkbox" id=<%=choice.name%> name=<%=choice.name%> class="imageselectbox"/>
+
+		  <label class="label-for-imageselectbox" for=<%=choice.name%> > 
+		  	<%=image_tag(choice.url)%> 
+		  </label>
+		</div>
+	</div>
+	<% end %>
+
+
+	<!--div class="col-md-4">
+		<div class="shop_box">
+		<input type="checkbox" id="Abstract_Art" name="Abstract_Art" class="imageselectbox"/>
 		  <label class="label-for-imageselectbox" for="Abstract_Art"><%=image_tag("Abstract_Art.jpg")%></label>
 		</div>
 	</div>
@@ -78,7 +91,7 @@
 		  <input type="checkbox" id="RR_Phantom" name="RR_Phantom" class="imageselectbox"/>
 		  <label class="label-for-imageselectbox" for="RR_Phantom"><%=image_tag("RR_Phantom.jpg")%></label>
 		</div>
-	</div>
+	</div-->
 	
 	</div>
       </div>

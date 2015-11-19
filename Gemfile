@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'mongo_mapper'
+gem 'bson_ext'
