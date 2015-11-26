@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'confirmation/' => 'home#confirmation',  as: 'confirmation'
   get 'about/' => 'home#about',  as: 'about'
   
-
+# TEST
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
