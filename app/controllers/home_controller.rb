@@ -10,7 +10,6 @@ class HomeController < ApplicationController
     @selection = params[:selection]
     @choices = Choice.all
 
-
   end
 
   def selections

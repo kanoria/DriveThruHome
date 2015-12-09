@@ -2,7 +2,7 @@
 
 Drive Thru Home
 
-[![Build Status](https://travis-ci.org/rishky/DriveThruHome.svg?branch=master)](https://travis-ci.org/rishky/DriveThruHome)
+[![Build Status](https://travis-ci.org/rishky/DriveThruHome.svg)](https://travis-ci.org/rishky/DriveThruHome)
 
 Rails
 MongoDB
