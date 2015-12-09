@@ -41,7 +41,7 @@ class ChoicesController < ApplicationController
   # PATCH/PUT /choices/1.json
   def update
     respond_to do |format|
-      if @choice.update(choice_params)
+      if @choice.update_attributes(choice_params)
         format.html { redirect_to @choice, notice: 'Choice was successfully updated.' }
         format.json { render :show, status: :ok, location: @choice }
       else

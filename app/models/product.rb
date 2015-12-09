@@ -5,5 +5,6 @@ class Product
   key :url, String
   key :tags, String
   key :type, String
+  key :price, String
 
 end

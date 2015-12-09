@@ -1,8 +1,9 @@
 == README
 
-Drive Thru Home
-
 [![Build Status](https://travis-ci.org/rishky/DriveThruHome.svg)](https://travis-ci.org/rishky/DriveThruHome)
 
-Rails
-MongoDB
+Drive Thru Home
+
+Framework used: Ruby on Rails
+Database used: MongoDB using Mongo Mapper
+Deployment: deployed on DigitalOcean server (Ubuntu, Ruby on Rails)
