@@ -9,6 +9,8 @@ def getStyleTags(inputArray)
     inputArray.each do |entryTag|
         selectedStyle = Choice.find_by_name(entryTag)
         styleTags << selectedStyle.tags
+
+    return styleTags
     end
 
 end

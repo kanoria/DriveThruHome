@@ -14,11 +14,9 @@ class HomeController < ApplicationController
   end
 
   def selections
-    #@selection = params[:selection]
-    getStyleTags(params[:images])
-    #getStyleTags(Choice.all)
-    #@styleTags = params[:selection]
-    #@styleselections = 
+    @selection = params[:selection]
+    @styleTags = getStyleTags(params[:images])
+    
   end
   
   def checkout
