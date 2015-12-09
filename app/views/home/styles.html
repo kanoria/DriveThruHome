@@ -1,4 +1,30 @@
   <div class="main">
+    <script type="text/javascript">
+    path = "<%= selections_path() %>";
+    selectedImages = []
+    function addImage(id)
+    	{
+    	if (selectedImages.indexOf(id) > -1)
+    		{
+    			var index = selectedImages.indexOf(id);
+    			if (index !== -1)
+    			{
+    				selectedImages.splice(index, 1);
+    			}
+    		}
+    	else
+    		{
+    		selectedImages.push(id)
+    		}
+    	}
+
+    function send()
+    {
+    	alert(path+"?images="+selectedImages)
+    	window.location = path+"?images="+selectedImages
+    }
+    </script>	
+
     <div class="shop_top">
       <div class="container">
 
@@ -13,7 +39,7 @@
 	<% @choices.each do |choice| %>
 	<div class="col-md-4">
 		<div class="shop_box">
-		  <input type="checkbox" id=<%=choice.name%> name=<%=choice.name%> class="imageselectbox"/>
+		  <input type="checkbox" id=<%=choice.name%> name=<%=choice.name%> onClick="addImage('<%=choice.name%>')" class="imageselectbox"/>
 
 		  <label class="label-for-imageselectbox" for=<%=choice.name%> > 
 		  	<%=image_tag(choice.url, :size => "300x200")%> 
@@ -21,7 +47,6 @@
 		</div>
 	</div>
 	<% end %>
-
 
 	<!--div class="col-md-4">
 		<div class="shop_box">
@@ -98,7 +123,8 @@
       
       <div class="row shop_box-top; padding-top:30%; margin-top: 10%">
 	<br><br>
-	<div class="button"><a style="margin-left: 0%;" href="<%= selections_path(selectedStyleChoices: , selection: "<%= @selection %>") %>">Make my room!</a></div>
+	<!-- <div class="button" ><a style="margin-left: 0%;" href="<%= selections_path() %>">Make my room</a></div> -->
+	<div class="button" onClick="send()"><a style="margin-left: 0%;">Make my room</div> 
       </div>
 
 	
