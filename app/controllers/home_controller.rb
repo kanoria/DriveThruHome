@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   def selections
     @selection = params[:selection]
     @styleTags = getStyleTags(params[:images])
-    
+    #@selectedProducts = 
   end
   
   def checkout
