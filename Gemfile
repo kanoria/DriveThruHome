@@ -9,8 +9,8 @@ gem 'bson_ext'
 
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+#gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -39,15 +39,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :production do
-    gem "pg"
-end
+#group :production do
+    #gem "pg"
+#end
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3', "~> 1.3.0"
+  #gem 'sqlite3', "~> 1.3.0"
 end
 
 group :development do
