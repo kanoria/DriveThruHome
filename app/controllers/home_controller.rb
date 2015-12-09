@@ -15,7 +15,9 @@ class HomeController < ApplicationController
 
   def selections
     @selection = params[:selection]
+    print(@selection)
     @styleTags = getStyleTags(params[:images])
+    print(@styleTags)
     #@selectedProducts = 
   end
   
