@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  include HomeHelper
+
   def index
     render :index
   end
@@ -9,10 +11,14 @@ class HomeController < ApplicationController
   def styles
     @selection = params[:selection]
     @choices = Choice.all
-
   end
 
   def selections
+    @selection = params[:selection]
+    getStyleTags(params[:selectedStyleChoices])
+    #getStyleTags(Choice.all)
+    #@styleTags = params[:selection]
+    #@styleselections = 
   end
   
   def checkout
