@@ -5,13 +5,9 @@ class ChoicesControllerTest < ActionController::TestCase
     @choice = Choice.new(name: "Freedom", tags: "Justice", url: "LibertyMutual.com") #choices(:one)
   end
 
-test "Should Create new Choice" do
-  assert_difference('Choice.count') do
-    post :create, choice: { name: @choice.name, tags: @choice.tags, url: @choice.url }
-  end
 
-  assert_redirected_to product_path(assigns(:choice))
-end
+
+
 
 '''
   test "should get index" do

@@ -2,12 +2,13 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
-    @product = Product.new(name: "Couch", tags: "Ouch", type: "couch", url: "web-nee", price: "99") #products(:one)
+    @product = Product.new(name: "Couch", tags: "Ouch", type: "couch", url: "web-nee") #products(:one)
   end
+
 
 test "Should Create new Product" do
   assert_difference('Product.count') do
-    post :create, product: { name: @product.name, tags: @product.tags, type: @product.type, url: @product.url, price: @product.price }
+    post :create, product: { name: @product.name, tags: @product.tags, type: @product.type, url: @product.url }
   end
 
   assert_redirected_to product_path(assigns(:product))
