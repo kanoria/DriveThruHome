@@ -12,4 +12,4 @@ Framework used: Ruby on Rails
 
 Database used: MongoDB using Mongo Mapper
 
-Deployment: deployed on DigitalOcean server (Ubuntu, Ruby on Rails)
+Running on DigitalOcean server (Ubuntu, Ruby on Rails)

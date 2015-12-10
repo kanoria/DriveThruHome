@@ -5,9 +5,20 @@ class ChoicesControllerTest < ActionController::TestCase
     @choice = Choice.new(name: "Freedom", tags: "Justice", url: "LibertyMutual.com") #choices(:one)
   end
 
+test "Should Create new style choice" do
+  assert_difference('Choice.count') do
+    post :create, choice: { name: @choice.name, tags: @choice.tags, type: @choice.type, url: @choice.url }
+  end
 
+  assert_redirected_to product_path(assigns(:choice))
+end
 
-
+test "Should update choice" do
+  assert_difference('Choice.count') do
+    patch :update, id: @choice, choice: { name: @choice.name, tags: @choice.tags, url: @choice.url }
+    assert_redirected_to choice_path(assigns(:choice))
+  end
+end
 
 '''
   test "should get index" do

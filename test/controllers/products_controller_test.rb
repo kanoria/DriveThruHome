@@ -5,13 +5,19 @@ class ProductsControllerTest < ActionController::TestCase
     @product = Product.new(name: "Couch", tags: "Ouch", type: "couch", url: "web-nee") #products(:one)
   end
 
-
 test "Should Create new Product" do
   assert_difference('Product.count') do
     post :create, product: { name: @product.name, tags: @product.tags, type: @product.type, url: @product.url }
   end
 
   assert_redirected_to product_path(assigns(:product))
+end
+
+test "Should update Product" do
+  assert_difference('Product.count') do
+    patch :update, id: @product, product: { name: @product.name, tags: @product.tags, url: @product.url }
+    assert_redirected_to product_path(assigns(:product))
+  end
 end
 
 '''
