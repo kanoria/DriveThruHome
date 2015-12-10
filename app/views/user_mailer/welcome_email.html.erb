@@ -1,0 +1,26 @@
+
+<h2>Thanks for your enquiry on DriveThruHome!</h2>
+<p>
+	Hi <%= @user.name %>,<br />
+	Thank you for signing up to DriveThruHome!<br />
+	You signed up with this address:<br />
+	<%= @user.email %>
+</p>
+
+<h2>Here is your order:</h2>
+
+<p>
+<% if @selectedProducts.any? %>
+	<% @selectedProducts.each do |selectedProduct| %>
+		<%=selectedProduct.name%> $<%=selectedProduct.price%>	
+	<% end %>
+<% end %>
+</p>
+
+<p>
+	Thank you,<br />
+	The DriveThruHome Team	
+</p>
+
+
+

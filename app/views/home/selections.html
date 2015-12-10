@@ -9,6 +9,7 @@
 		          </div>
 
                <div class="panel">
+                <% if @selectedProducts.any? %>
                   <% @selectedProducts.each do |selectedProduct| %>
                     <div class="col-md-4">
                       <div class="shop_box">
@@ -18,71 +19,42 @@
                         <p>
                           <%=selectedProduct.name%> $<%=selectedProduct.price%>
                         </p>
-
-
                       </div>
                     </div>
+                <% end %>
                 <% end %>
                 </div>
                 </div>
 
-
-
-			  <!--div class="row">
-				<div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("stockholm-bed.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Stockholm Bed</a></h4>
-                  <p class="m_5">$989</p>
-                </div>
-
-                <div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("stockholm-duvet-pillow.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Duvet Cover & Pillowcase</a></h4>
-                  <p class="m_5">$49.99</p>
-                </div>
-
-                <div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("stockholm-rug.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Rug</a></h4>
-                  <p class="m_5">$199</p>
-                </div>
-
-                <div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("throw-bed.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Throw</a></h4>
-                  <p class="m_5">$29.99</p>
-                </div>
-
-                <div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("stockholm-nightstand.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Nightstand</a></h4>
-                  <p class="m_5">$99</p>
-                </div>
-
-                <div class="col-md-3 top_box" style="padding-top: 40px">
-				  <div class="view view-ninth">
-                   <%=image_tag("stockholm-floor-lamp.JPG")%>
-                  </div>
-                  <h4 class="m_4"><a href="#">Floorlamp</a></h4>
-                  <p class="m_5">$99</p>
-                </div>
-			</div-->
-
+      <div class="row">
+        <div class="row shop_box-top; padding-top:30%; margin-top: 10%">
+             <br><br><br><br>
+             <% if @user.errors.any? %>
+              <% @user.errors.full_messages.each do |m| %>
+                <%= m %><br>
+              <% end %>
+             <% end %>
+        </div>
+      </div>
 
 			<div class="row">
 				<div class="row shop_box-top; padding-top:30%; margin-top: 10%">
 	           <br><br><br><br>
-	           <div class="button"><a style="margin-left: 0%;" href="<%= checkout_path() %>">Checkout</a></div>
+             <%= form_for @user do |f| %>
+             <div class="form-group">
+             <%= f.label :name %>
+             <%= f.text_field :name %>
+             </div>
+             <div class="form-group">
+             <%= f.label :email %>
+             <%= f.text_field :email %>
+             </div>
+             <div class="form-group">
+             <%= f.hidden_field :product_ids, value: "#{@selectedProducts.map{|p| p.id }.to_json}" %>
+             <%= f.hidden_field :selection, value: @selection %>
+             <%= f.submit 'Checkout' %>
+             </div>
+             <% end %>
         </div>
 			</div>
 

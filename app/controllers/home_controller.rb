@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   include ProductsHelper
 
   def index
-    render :index
   end
 
   def shop
@@ -15,18 +14,19 @@ class HomeController < ApplicationController
   end
 
   def selections
+    @user = User.new
     @selection = params[:selection]
-    @styleTags = getStyleTags(params[:images])
-    @selectedProducts = chooseProducts(@selection, @styleTags)
+    styleTags = getStyleTags(params[:images])
+    @selectedProducts = chooseProducts(@selection, styleTags)
   end
   
   def checkout
     render :text => 'checkout'
   end
 
-  def confirmation
-    render :text => 'confirmation'
-  end
+  #def confirmation
+    #render :text => 'confirmation'
+  #end
 
   #def about
     #render :text => 'about'

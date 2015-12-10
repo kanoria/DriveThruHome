@@ -10,6 +10,4 @@ Drive Thru Home allows users to furnish a room in their home in 3 quick steps. U
 
 Framework used: Ruby on Rails
 
-Database used: MongoDB using Mongo Mapper
-
 Running on DigitalOcean server (Ubuntu, Ruby on Rails)

@@ -1,8 +1,2 @@
-class Choice
-  include MongoMapper::Document
-
-  key :name, String
-  key :url, String
-  key :tags, String
-
+class Choice < ActiveRecord::Base
 end

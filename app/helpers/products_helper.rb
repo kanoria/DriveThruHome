@@ -6,26 +6,25 @@ module ProductsHelper
 
         if roomSelection == "bedroom"
             validTypes = ["bed", "mattress", "covers", "lamp", "nightstand", "rug", "throw"]
-        
         else
-            validTypes = ["sofa", "armchair", "lamp", "coffee_table", "rug", "art"]
+            validTypes = ["sofa", "armchair", "lamp", "coffee_table", "rug", "throw", "art"]
         end
 
         validTypes.each do |selectedType|
 
             selectedProductOfType = Array.new
-            Product.find_each(:type => selectedType) do |productOfAType|
+            Product.where(:category => selectedType) do |productOfAType|
                 if !(productOfAType.tags.split(',') & styleTags[0].split(",")).empty?
                     selectedProductOfType << productOfAType
                 end
             end
             
             if selectedProductOfType.any? == false
-                selectedProducts << Product.all(:type => selectedType).sample
+                selectedProducts << Product.where(:category => selectedType).sample
             else
-                selectedProducts << selectedProductOfType.sample
+                selectedProducts << selectedProductOfType.sample 
             end
-            
+
         end
 
         return selectedProducts
