@@ -3,12 +3,30 @@
       <div class="container">
 
 
-		<div class="container">
-		<div class="row" style="col-md-12; text-align:center; padding-bottom: 30pt">
-	  	<h1> Your selections are ready</h1>
-		</div>
+		      <div class="container">
+		          <div class="row" style="col-md-12; text-align:center; padding-bottom: 30pt">
+	  	            <h1> Your selections are ready for your <%= @selection %>.</h1>
+		          </div>
 
-    
+               <div class="panel">
+                  <% @selectedProducts.each do |selectedProduct| %>
+                    <div class="col-md-4">
+                      <div class="shop_box">
+                        <label class="label-for-imageselectbox" for=<%=selectedProduct.name%> > 
+                          <%=image_tag(selectedProduct.url, :size => "300x200")%> 
+                        </label>
+                        <p>
+                          <%=selectedProduct.name%> $<%=selectedProduct.price%>
+                        </p>
+
+
+                      </div>
+                    </div>
+                <% end %>
+                </div>
+                </div>
+
+
 
 			  <!--div class="row">
 				<div class="col-md-3 top_box" style="padding-top: 40px">
@@ -63,13 +81,10 @@
 
 			<div class="row">
 				<div class="row shop_box-top; padding-top:30%; margin-top: 10%">
-	<br><br><br><br>
-	<div class="button"><a style="margin-left: 0%;" href="<%= checkout_path() %>">Checkout</a></div>
-      </div>
-
+	           <br><br><br><br>
+	           <div class="button"><a style="margin-left: 0%;" href="<%= checkout_path() %>">Checkout</a></div>
+        </div>
 			</div>
-
-
 
 		 </div>
 	</div>
