@@ -7,8 +7,5 @@ gemfile: Gemfile
 
 sudo: required
 
-services:
-  - mongodb
-
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
